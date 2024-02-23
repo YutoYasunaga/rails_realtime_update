@@ -15,7 +15,12 @@ html
     header class="fixed top-0 z-50 w-full bg-gradient-to-b from-purple-500 to-fuchsia-600 p-4 text-sm lg:text-xl text-white flex justify-center shadow-xl"
       = link_to 'Rails realtime update with Turbo Stream & Action Cable', root_path, class: 'hover:underline'
 
-    main class="px-2 mt-24 max-w-xl mx-auto w-full"
+    main class="px-2 mt-20 max-w-xl mx-auto w-full"
+      div class="my-4"
+        = link_to 'https://github.com/YutoYasunaga/rails_realtime_update', target: '_blank', class: 'text-blue-600 font-bold hover:underline' do
+          i class="fa-brands fa-github"
+          span.ml-1 GitHub source code
+
       #flash
       = yield
 

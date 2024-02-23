@@ -1,12 +1,12 @@
 div
   = form_with(model: staff, html: { class: 'flex' }) do |form|
     div class="p-4 w-1/2"
-      = form.text_field :name, class: 'w-full'
+      = form.text_field :name, placeholder: 'Yuto Yasunaga', class: 'w-full'
       - if staff.errors[:name].any?
         div class="text-red-600 text-sm" = "#{Staff.human_attribute_name(:name)} #{staff.errors[:name].first}"
 
     div class="p-4 w-1/4"
-      = form.number_field :age, class: 'w-full'
+      = form.number_field :age, placeholder: '25', class: 'w-full'
       - if staff.errors[:age].any?
         div class="text-red-600 text-sm" = "#{Staff.human_attribute_name(:age)} #{staff.errors[:age].first}"
 
