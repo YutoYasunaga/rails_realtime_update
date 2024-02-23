@@ -53,3 +53,5 @@ node_modules
 .sass-cache
 /app/javascript/application.css
 /app/javascript/application.css.map
+
+dump.rdb
