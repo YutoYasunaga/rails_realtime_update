@@ -2,7 +2,7 @@ doctype html
 
 html
   head
-    title Rails inline CRUD with Hotwire
+    title Rails realtime update with Turbo Stream & Action Cable
     meta name="viewport" content="width=device-width,initial-scale=1"
 
     = csrf_meta_tags
@@ -12,8 +12,8 @@ html
     = vite_javascript_tag 'application'
 
   body class="bg-neutral-100"
-    header class="fixed top-0 z-50 w-full bg-gradient-to-b from-purple-500 to-fuchsia-600 p-4 text-xl text-white flex justify-center shadow-xl"
-      = link_to 'Rails inline CRUD with Hotwire', root_path, class: 'hover:underline'
+    header class="fixed top-0 z-50 w-full bg-gradient-to-b from-purple-500 to-fuchsia-600 p-4 text-sm lg:text-xl text-white flex justify-center shadow-xl"
+      = link_to 'Rails realtime update with Turbo Stream & Action Cable', root_path, class: 'hover:underline'
 
     main class="px-2 mt-24 max-w-xl mx-auto w-full"
       #flash
