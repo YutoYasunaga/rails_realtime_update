@@ -1,0 +1,29 @@
+# inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+Layout/LineLength:
+  Max: 150
+
+Metrics/BlockLength:
+  CountComments: false
+  Exclude:
+    - 'lib/**/*'
+    - 'config/**/*'
+    - 'spec/**/*'
+    - 'app/views/**/*.jbuilder'
+
+Style/Documentation:
+  Enabled: false

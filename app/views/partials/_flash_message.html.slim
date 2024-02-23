@@ -1,0 +1,10 @@
+#flash
+  - flash.each do |key, value|
+    div class="rails-flash-message flash-message-content flash-message-content--#{key}" = value
+
+  javascript:
+      setTimeout(() => {
+          document.querySelectorAll('.rails-flash-message').forEach(flashMessageContent => {
+              flashMessageContent.classList.add('flash-message-fade-out')
+          })
+      }, 4000)

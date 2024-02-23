@@ -1,0 +1,13 @@
+= turbo_frame_tag staff, class: "[&:nth-child(even)>div]:bg-slate-100 [&:nth-child(odd)>div]:bg-white [&:last-of-type>div]:rounded-b-xl" do
+  = turbo_stream_from staff
+
+  div id="#{dom_id staff}" class="border-t border-solid border-gray-300 flex"
+    div class="p-2 w-1/2"
+      = staff.name
+    div class="p-2 w-1/4"
+      = staff.age
+    div class="px-4 py-2 w-1/4 flex space-x-4 justify-end"
+      = link_to edit_staff_path(staff.id) do
+        i class="fa-regular fa-pen-to-square"
+      = button_to staff, method: :delete, data: { turbo_confirm: "Delete '#{staff.name}'?" } do
+        i class="fa-regular fa-trash-can"

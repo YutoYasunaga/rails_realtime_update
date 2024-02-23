@@ -1,0 +1,16 @@
+= turbo_stream_from 'staffs'
+
+h1 Staffs
+
+div class="mt-4"
+  div class="border border-solid border-gray-300 rounded-xl shadow-lg"
+    div class="flex font-bold bg-slate-300 rounded-t-xl"
+      div class="p-2 w-1/2" Name
+      div class="p-2 w-1/4" Age
+      div class="p-2 w-1/4"
+
+    div class="bg-slate-100"
+      = render 'new_staff_button'
+
+    #staffs
+      = render @staffs

@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex flex-col h-[100vh];
+  main {
+    @apply flex-grow;
+  }
+}
+
+h1 {
+  @apply font-bold text-2xl;
+}
+
+form {
+  input[type=text], input[type=number] {
+    @apply p-2 rounded-lg border border-solid border-zinc-400;
+  }
+}
+
+.btn {
+  @apply px-4 py-2 bg-gradient-to-b from-purple-500 to-fuchsia-500 text-white hover:from-purple-600 hover:to-fuchsia-600 rounded-lg cursor-pointer;
+}
+
+#flash {
+  @apply fixed top-20 right-8 lg:right-16 z-50;
+
+  .flash-message-content {
+    @apply mb-8 p-4 empty:hidden border-l-8 border-orange-400 w-[300px] lg:w-[500px] shadow-2xl text-lg  bg-green-300 text-green-700;
+    &--alert {
+      @apply bg-red-200 text-red-800;
+    }
+  }
+}
+
+.flash-message-fade-out {
+  animation: fade-out 2s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
